@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--// This XML documentation is manually generated. //-->
+<!--// There are likely issues trying to auto generate this at .NET compilation. //-->
+<doc>
+    <assembly>
+        <name>HyperVMgmtLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:RobotFramework.HyperVMgmtLibrary">
+            <summary>
+            A (test) library to manage Hyper-V virtual machines within the Robot Framework test automation framework.
+            This library has methods to (remotely) stop/start virtual machines and take snapshots or revert back to them.
+            </summary>
+        </member>
+        <member name="M:RobotFramework.HyperVMgmtLibrary.start_virtual_machine(System.String)">
+            <summary>
+            Start up a configured virtual machine in Hyper-V.
+            </summary>
+            <param name="name">Name of virtual machine to start up.</param>
+            <returns>True if command succeeds, or false if it fails.</returns>
+        </member>
+        <member name="M:RobotFramework.HyperVMgmtLibrary.stop_virtual_machine(System.String)">
+            <summary>
+            Shut down a configured virtual machine (VM) in Hyper-V. 
+            This is considered a hardware/forced shutdown, and is not the ideal way to shut down a VM.
+            Use as a last resort.
+            </summary>
+            <param name="name">Name of virtual machine to shut down.</param>
+            <returns>True if command succeeds, or false if it fails.</returns>
+        </member>
+        <member name="M:RobotFramework.HyperVMgmtLibrary.hard_reset_virtual_machine(System.String)">
+            <summary>
+            Reboot a configured virtual machine (VM) in Hyper-V.
+            This is considered a hardware/forced reset or hard reset and is not the ideal way to restart a VM.
+            Use as a last resort.
+            </summary>
+            <param name="name">Name of virtual machine to reset.</param>
+            <returns>True if command succeeds, or false if it fails.</returns>
+        </member>
+        <member name="M:RobotFramework.HyperVMgmtLibrary.revert_to_last_snapshot(System.String)">
+            <summary>
+            Revert a configured virtual machine, running or not in Hyper-V, back to last saved snapshot.
+            Useful for restoring saved state or "reimaging" or "restoring" system back to known base state.
+            </summary>
+            <param name="vmName">Name of virtual machine to revert.</param>
+            <returns>True if command succeeds, or false if it fails.</returns>
+        </member>
+        <member name="M:RobotFramework.HyperVMgmtLibrary.get_virtual_machine_information(System.String)">
+            <summary>
+            Get info on a configured virtual machine in Hyper-V.
+            Things like VM name, notes, VM state, current memory usage, CPU load, guest OS running inside VM, etc.
+            </summary>
+            <param name="name">Name of virtual machine to get information about.</param>
+            <returns>A string with VM information found.</returns>
+        </member>
+    </members>
+</doc>
